@@ -12,6 +12,7 @@ $padding-small: 8px 20px;
 
 @mixin button-primary {
     @include button();
+    text-align: center;
     border-radius: 10px;
     background-color: base.$primary-red;
     padding: 17px 70px;

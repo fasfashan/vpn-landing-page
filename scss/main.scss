@@ -17,14 +17,67 @@ ul {
     list-style: none;
 }
 .container {
-    @media screen and (max-width: 1920px) {
-       @include base.container-xl();
-    }
-    @media screen and (max-width: 1440px) {
-       @include base.container-lg();
-    }
-    
+       @include base.container();
 }
 .nav {
     @include component.navbar();
+}
+
+.hero {
+    margin-top: 112px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+    &__content {
+        grid-column: 1 / 7;
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h1 {
+                color: base.$black;
+                font-weight: 500;
+                font-size: base.$heading-1;
+                line-height: 70px;
+                span {
+                    font-weight: 700;
+                }
+            }
+            p {
+                color: base.$grey;
+                font-size: base.$paragraph-1;
+                line-height: 30px;
+                span {
+                    font-weight: 600;
+
+                }
+            }
+        }
+        .button-primary {
+            @include component.button-primary();
+            align-self: flex-start;
+        }
+        @media screen and (max-width: 768px){
+            grid-column: 1 / 13;
+            .button-primary {
+                width: 100%;
+    
+                
+            }
+        }
+    }
+    
+    &__image {
+        grid-column: 7 / 13;
+        img {
+            width: 100%;
+        }
+        @media screen and (max-width: 768px){
+            grid-column: 1 / 13;
+        
+        }
+    }
 }
