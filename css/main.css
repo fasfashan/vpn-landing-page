@@ -1,3 +1,36 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: "Rubik", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
 body {
+  background-color: #FFECEC;
+  padding: 100px;
+}
+
+.button-primary {
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+  background-color: transparent;
+  color: #F53838;
+  border-radius: 50px;
+  padding: 17px 35px;
+  border: 1px solid #F53838;
+}
+.button-primary:hover {
   background-color: #F53838;
+  color: #fff;
+  border: none;
 }/*# sourceMappingURL=main.css.map */
