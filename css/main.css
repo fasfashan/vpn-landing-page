@@ -11,12 +11,73 @@ html {
   margin: 0;
 }
 
-body {
-  background-color: #FFECEC;
-  padding: 100px;
+ul {
+  list-style: none;
 }
 
-.button-primary {
+@media screen and (max-width: 1920px) {
+  .container {
+    width: calc(100% - 3.75rem);
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .container {
+    width: calc(100% - 2rem);
+    max-width: 1140px;
+    margin-inline: auto;
+  }
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+@media screen and (max-width: 950px) {
+  .nav {
+    padding-top: 16px;
+  }
+}
+.nav__menu {
+  display: flex;
+  gap: 40px;
+}
+@media screen and (max-width: 950px) {
+  .nav__menu {
+    display: none;
+    padding-top: 16px;
+  }
+}
+.nav__menu li a {
+  text-decoration: none;
+  color: #4F5665;
+  font-size: 1rem;
+}
+.nav__menu li a:hover {
+  color: #F53838;
+}
+.nav__cta {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (max-width: 950px) {
+  .nav__cta {
+    gap: 14px;
+  }
+}
+.nav__cta .button-link {
+  text-decoration: none;
+  color: #0B132A;
+  font-weight: 700;
+}
+.nav__cta .button-link:hover {
+  color: #4F5665;
+}
+.nav__cta .button-primary {
   font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
@@ -26,11 +87,33 @@ body {
   background-color: transparent;
   color: #F53838;
   border-radius: 50px;
-  padding: 17px 35px;
-  border: 1px solid #F53838;
+  padding: 17px 30px;
+  outline: 1px solid #F53838;
 }
-.button-primary:hover {
+.nav__cta .button-primary:hover {
   background-color: #F53838;
+  box-shadow: 0px 20px 40px -15px rgba(245, 56, 56, 0.81);
   color: #fff;
   border: none;
+}
+@media screen and (max-width: 950px) {
+  .nav__cta .button-primary {
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+    background-color: transparent;
+    color: #F53838;
+    border-radius: 50px;
+    padding: 8px 20px;
+    outline: 1px solid #F53838;
+  }
+  .nav__cta .button-primary:hover {
+    background-color: #F53838;
+    box-shadow: 0px 20px 40px -15px rgba(245, 56, 56, 0.81);
+    color: #fff;
+    border: none;
+  }
 }/*# sourceMappingURL=main.css.map */

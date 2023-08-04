@@ -11,12 +11,20 @@ html {
 *::after {
     box-sizing: inherit;
     margin: 0;
+
 }
-body {
-    background-color: base.$primary-light;
-    padding: 100px
+ul {
+    list-style: none;
 }
-.button-primary {
-    @include component.button-secondary();
+.container {
+    @media screen and (max-width: 1920px) {
+       @include base.container-xl();
+    }
+    @media screen and (max-width: 1440px) {
+       @include base.container-lg();
+    }
     
+}
+.nav {
+    @include component.navbar();
 }

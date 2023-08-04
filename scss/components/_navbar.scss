@@ -1,0 +1,52 @@
+@use '../base/' as base;
+@use 'button' as button;
+
+@mixin navbar{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    @media screen and (max-width: 950px) {
+            padding-top: 16px;
+        }
+    &__menu {
+        @media screen and (max-width: 950px) {
+            display: none;
+            padding-top: 16px;
+        }
+        display: flex;
+        gap: 40px;
+        li {
+            a{
+                text-decoration: none;
+                color: base.$grey;
+                font-size: base.$paragraph-1;
+                &:hover{
+                    color:base.$primary-red;
+                }
+            }
+        }
+    }
+    &__cta {
+         @media screen and (max-width: 950px) {
+            gap: 14px;
+        }
+        display: flex;
+        align-items: center;
+        gap: 30px ;
+        .button-link{
+            text-decoration: none;
+            color: base.$black;
+            font-weight: 700;
+            &:hover {
+                color: base.$grey;
+            }
+        }
+        .button-primary {
+            @include button.button-secondary();
+            @media screen and (max-width: 950px) {
+            @include button.button-secondary(8px 20px)
+        }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@mixin container-xl {
+    width: calc(100% - 3.75rem);
+    max-width: 1440px;
+    margin-inline: auto;
+}
+@mixin container-lg {
+    width: calc(100% - 2rem);
+    max-width: 1140px;
+    margin-inline: auto;
+}
