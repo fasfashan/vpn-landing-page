@@ -25,6 +25,7 @@ ul {
 
 .hero {
     margin-top: 112px;
+    align-items: center;
     display: grid;
     gap: 24px;
     grid-template-columns: repeat(12, 1fr);
@@ -80,4 +81,63 @@ ul {
         
         }
     }
+}
+
+.service {
+     @media screen and (max-width: 768px){
+            flex-direction: column;
+            padding: 20px;
+            gap: 40px;
+      }
+    display: flex;
+    flex-wrap: wrap;
+    padding: 68px 90px;
+    justify-content: space-between;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    box-shadow: base.$shadow-grey;
+    background-color: base.$white;
+    @mixin service{
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        @media screen and (max-width: 768px){
+            flex-direction: column;
+            justify-content: center;
+      }
+    }
+    &__users {
+        @include service();
+        .content {
+            text-align: center;
+        }
+        
+    }
+    &__location {
+        @include service();
+        .content {
+            text-align: center;
+        }
+        
+    }
+      &__servers {
+        @include service();
+        .content {
+            text-align: center;
+        }
+        
+    }
+    &__divider {
+        border: 1px solid #EEEFF2;
+        height: 120px;
+        @media screen and (max-width: 768px){
+            display: none;
+      }
+        
+    }
+     &__location {
+        @include service();
+    }
+    
+    
 }

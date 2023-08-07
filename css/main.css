@@ -111,6 +111,7 @@ ul {
 
 .hero {
   margin-top: 112px;
+  align-items: center;
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(12, 1fr);
@@ -177,5 +178,85 @@ ul {
 @media screen and (max-width: 768px) {
   .hero__image {
     grid-column: 1/13;
+  }
+}
+
+.service {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 68px 90px;
+  justify-content: space-between;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  box-shadow: 15px 20px 40px -15px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .service {
+    flex-direction: column;
+    padding: 20px;
+    gap: 40px;
+  }
+}
+.service__users {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .service__users {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.service__users .content {
+  text-align: center;
+}
+.service__location {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .service__location {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.service__location .content {
+  text-align: center;
+}
+.service__servers {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .service__servers {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.service__servers .content {
+  text-align: center;
+}
+.service__divider {
+  border: 1px solid #EEEFF2;
+  height: 120px;
+}
+@media screen and (max-width: 768px) {
+  .service__divider {
+    display: none;
+  }
+}
+.service__location {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .service__location {
+    flex-direction: column;
+    justify-content: center;
   }
 }/*# sourceMappingURL=main.css.map */
