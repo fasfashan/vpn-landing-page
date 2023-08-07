@@ -25,7 +25,7 @@ ul {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
+  padding: 24px 0px;
 }
 @media screen and (max-width: 950px) {
   .nav {
@@ -109,6 +109,18 @@ ul {
   }
 }
 
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+#header.active {
+  border-bottom: 1px solid #DDDDDD;
+  box-shadow: 15px 20px 40px -15px rgba(0, 0, 0, 0.06);
+}
+
 .hero {
   margin-top: 112px;
   align-items: center;
@@ -183,6 +195,7 @@ ul {
 
 .service {
   display: flex;
+  margin-bottom: 1000px;
   flex-wrap: wrap;
   padding: 68px 90px;
   justify-content: space-between;

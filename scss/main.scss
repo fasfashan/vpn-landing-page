@@ -22,7 +22,16 @@ ul {
 .nav {
     @include component.navbar();
 }
-
+#header {position: fixed;
+  top: 0;
+  width: 100%;
+    background-color: base.$white;
+   
+}
+#header.active {
+ border-bottom: 1px solid base.$light-grey;
+ box-shadow: base.$shadow-grey;
+}
 .hero {
     margin-top: 112px;
     align-items: center;
@@ -90,6 +99,7 @@ ul {
             gap: 40px;
       }
     display: flex;
+    margin-bottom: 1000px;
     flex-wrap: wrap;
     padding: 68px 90px;
     justify-content: space-between;

@@ -2,10 +2,11 @@
 @use 'button' as button;
 
 @mixin navbar{
+    
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding-top: 50px;
+    padding: 24px 0px;
     @media screen and (max-width: 950px) {
             padding-top: 16px;
         }
