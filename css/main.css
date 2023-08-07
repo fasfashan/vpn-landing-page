@@ -13,6 +13,7 @@ html {
 
 ul {
   list-style: none;
+  padding: 0px;
 }
 
 .container {
@@ -195,12 +196,10 @@ ul {
 
 .service {
   display: flex;
-  margin-bottom: 1000px;
   flex-wrap: wrap;
   padding: 68px 90px;
   justify-content: space-between;
   margin-top: 120px;
-  margin-bottom: 120px;
   box-shadow: 15px 20px 40px -15px rgba(0, 0, 0, 0.06);
   background-color: #fff;
 }
@@ -272,4 +271,49 @@ ul {
     flex-direction: column;
     justify-content: center;
   }
+}
+
+.features {
+  margin-top: 120px;
+  gap: 24px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.features__image {
+  grid-column: 1/7;
+}
+@media screen and (max-width: 768px) {
+  .features__image {
+    grid-column: 1/13;
+  }
+}
+.features__image img {
+  width: 100%;
+}
+.features__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-column: 8/13;
+}
+@media screen and (max-width: 768px) {
+  .features__content {
+    grid-column: 1/13;
+  }
+}
+.features__content h3 {
+  font-size: 2.1875rem;
+}
+.features__content li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #4F5665;
+  font-size: 0.875rem;
+}
+.features__content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }/*# sourceMappingURL=main.css.map */
